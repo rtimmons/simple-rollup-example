@@ -1,8 +1,8 @@
 import {mymain} from './lib';
-const steps = [{foo: bar}];
+const steps = [{foo: 'bar'}];
 
-function main() {
+export default function main() {
   mymain(steps);
 }
 
-module.exports = main;
+

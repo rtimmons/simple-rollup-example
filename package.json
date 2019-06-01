@@ -1,10 +1,11 @@
 {
-  "name": "all-rolled-up",
+  "name": "simple-rollup-example",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "roll": "npx rollup --config"
+    "roll": "npx rollup --config",
+    "roll-run": "npm run roll; mongo --nodb ./rolled-up.js"
   },
   "author": "",
   "license": "MIT",

@@ -1,4 +1,3 @@
-
 export function mymain(steps) {
-  console.log(steps);
+  print(steps);
 }
