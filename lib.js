@@ -1,3 +1,5 @@
+import * as sbi from './sbi.js';
+
 export function mymain(steps) {
-  print(steps);
+  sbi.print(steps);
 }
