@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "roll": "npx rollup --config",
-    "roll-run": "npm run roll; mongo --nodb ./rolled-up.js"
+    "run": "ts-node ./run-rollup.ts; mongo --nodb ./rolled-up.js"
   },
   "author": "",
   "license": "MIT",
