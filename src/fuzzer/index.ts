@@ -1,6 +1,6 @@
-import * as runner from './StepRunner';
 
-export default function main(generated: any) {
-  runner.runSteps(generated);
-}
+import {JSonModuleGenerator} from "./StepGenerator";
+import {runSteps} from "./StepRunner";
 
+export {JSonModuleGenerator as generator};
+export {runSteps as runner};
