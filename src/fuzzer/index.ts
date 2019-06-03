@@ -1,5 +1,6 @@
-import {mymain} from './lib';
+import * as runner from './StepRunner';
 
-export default function main(steps: any) {
-  mymain(steps);
+export default function main(generated: any) {
+  runner.runSteps(generated);
 }
+
