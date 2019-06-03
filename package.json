@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "run": "ts-node ./run-rollup.ts; mongo --nodb ./rolled-up.js"
+    "roller": "ts-node src/roller/run-rollup.ts; mongo --nodb ./generated/generated-test.js"
   },
   "author": "",
   "license": "MIT",

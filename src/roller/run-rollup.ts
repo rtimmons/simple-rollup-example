@@ -28,23 +28,22 @@ class ModuleGeneratorWriter {
 }
 
 import * as rollup from 'rollup';
-import * as config from './rollup.config';
+import * as glue from './plugin-glue';
 
 async function main() {
     const writer = new ModuleGeneratorWriter();
     const generator = new JSonModuleGenerator({foo: 1});
 
-    const genPath = './generated-config.js';
-
-    writer.write(generator, genPath);
+    fs.copyFileSync('./src/roller/unified.js.txt', './generated/unified.js');
+    writer.write(generator, './generated/generated-config.js');
 
     const inputOpts: rollup.InputOptions = {
-        input: './unified.ts',
-        plugins: [config.plugin],
+        input: './generated/unified.js',
+        plugins: [glue.plugin],
         preserveModules: false,
     };
     const outputOpts: rollup.OutputOptions = {
-        file: 'rolled-up.js',
+        file: 'generated/rolled-up.js',
         format: 'iife',
         sourcemap: true,
     };
@@ -57,7 +56,7 @@ async function main() {
         lines.push(chunkOrAsset.code);
     }
 
-    fs.writeFileSync('./rolled-up.js', lines.join('\n'));
+    fs.writeFileSync('./generated/generated-test.js', lines.join('\n'));
 }
 
 Promise.resolve(main().catch(e => console.error(e)));
