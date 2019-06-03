@@ -1,6 +1,4 @@
 // imagine this comes from e.g. a 'test_builder'
-import {TreeshakingOptions} from "rollup";
-
 class JSonModuleGenerator {
     private readonly obj: object;
     constructor(obj: object) {
