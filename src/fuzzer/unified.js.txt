@@ -1,3 +1,7 @@
+//
+// this  is "glue" code that ties the generated "config" to the runner
+//
+
 import * as generated from './generated-config';
 import * as main from '../src/fuzzer';
 main.default(generated.default);

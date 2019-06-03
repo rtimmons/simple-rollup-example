@@ -1,3 +1,5 @@
+import * as fs from 'fs';
+
 // imagine this comes from e.g. a 'test_builder'
 export class JSonModuleGenerator {
     private readonly obj: object;
@@ -14,15 +16,5 @@ export class JSonModuleGenerator {
         return {
             lines: lines,
         };
-    }
-}
-
-// this would be "framework" code
-import * as fs from 'fs';
-export class ModuleGeneratorWriter {
-    // replace JSonModuleGenerator with an interface for ↑↑
-    write(moduleGenerator: JSonModuleGenerator, fsPath: string) {
-        const output = moduleGenerator.generate();
-        fs.writeFileSync(fsPath, output.lines.join('\n'));
     }
 }
