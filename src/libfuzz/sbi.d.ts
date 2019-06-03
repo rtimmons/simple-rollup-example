@@ -1,2 +1,3 @@
-// "sbi" = "shell-built-ins"
-declare function print(): void;
+// Fill this in with shell built-ins as needed.
+
+declare function print(...args: any[]): void;
