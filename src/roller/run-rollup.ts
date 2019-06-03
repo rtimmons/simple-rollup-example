@@ -34,7 +34,7 @@ async function main() {
     const writer = new ModuleGeneratorWriter();
     const generator = new JSonModuleGenerator({foo: 1});
 
-    fs.copyFileSync('./src/roller/unified.js.txt', './generated/unified.js');
+    fs.copyFileSync('./src/fuzzer/unified.js.txt', './generated/unified.js');
     writer.write(generator, './generated/generated-config.js');
 
     const inputOpts: rollup.InputOptions = {
