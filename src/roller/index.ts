@@ -1,4 +1,6 @@
 // imagine this comes from e.g. a 'test_builder'
+import {TreeshakingOptions} from "rollup";
+
 class JSonModuleGenerator {
     private readonly obj: object;
     constructor(obj: object) {
@@ -41,6 +43,7 @@ async function main() {
         input: './generated/unified.js',
         plugins: [glue.plugin],
         preserveModules: false,
+        external: ['../libfuzz/sbi.js'],
     };
     const outputOpts: rollup.OutputOptions = {
         file: 'generated/rolled-up.js',

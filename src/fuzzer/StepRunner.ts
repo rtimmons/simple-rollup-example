@@ -1,6 +1,5 @@
-// shell-built-ins
-import * as sbi from '../libfuzz/sbi.js';
+import '../libfuzz/sbi.js';
 
 export function runSteps(steps: any) {
-  sbi.print(steps);
+  print(steps);
 }
